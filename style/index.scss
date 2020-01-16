@@ -1,0 +1,26 @@
+:root {
+    --screen-background-colour: black;
+}
+
+html {
+    font-size: 20px;
+}
+
+body {
+    background-color: var(--screen-background-colour);
+    color: white;
+    font-family: -apple-system, sans-serif;
+    transition: background-color 0.2s ease;
+}
+
+a {
+    color: white;
+}
+
+button {
+    padding: 2em;
+}
+
+.pin {
+    min-height: 1.2em;
+}

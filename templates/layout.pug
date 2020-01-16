@@ -1,0 +1,24 @@
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(
+      name='viewport',
+      content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    title #{ htmlWebpackPlugin.options.title }
+  body
+    h1 #{ htmlWebpackPlugin.options.title }
+    block content
+  nav
+    ul
+      li
+        a(href="./") lock
+      li
+        a(href="./keys.html") keys
+      li
+        a(href="./buttons.html") buttons
+      li
+        a(href="./new.html") new
+      li
+        a(href="./subject.html") subject
+      li
+        a(href="./state-flow.html") state flow
