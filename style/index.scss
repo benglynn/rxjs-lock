@@ -1,12 +1,15 @@
+@import './nav-list';
+@import './layout';
+@import './keypad';
+
+
 :root {
     --screen-background-colour: black;
 }
 
 html {
     font-size: 20px;
-}
-
-body {
+    height: 100%;
     background-color: var(--screen-background-colour);
     color: white;
     font-family: -apple-system, sans-serif;
@@ -15,10 +18,6 @@ body {
 
 a {
     color: white;
-}
-
-button {
-    padding: 2em;
 }
 
 .pin {

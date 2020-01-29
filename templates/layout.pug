@@ -5,20 +5,25 @@ html(lang='en')
       name='viewport',
       content='width=device-width, initial-scale=1, shrink-to-fit=no')
     title #{ htmlWebpackPlugin.options.title }
-  body
-    h1 #{ htmlWebpackPlugin.options.title }
-    block content
-  nav
-    ul
-      li
-        a(href="./") lock
-      li
-        a(href="./keys.html") keys
-      li
-        a(href="./buttons.html") buttons
-      li
-        a(href="./new.html") new
-      li
-        a(href="./subject.html") subject
-      li
-        a(href="./state-flow.html") state flow
+  body(class="container")
+
+    header(class="item")
+      h1 #{ htmlWebpackPlugin.options.title }
+
+    article(class="item content")
+      block content
+
+    footer(role="navigation" class="item")
+      ul(class="nav-list")
+        li(class="nav-list__item")
+          a(href="./") lock
+        li(class="nav-list__item")
+          a(href="./keys.html") keys
+        li(class="nav-list__item")
+          a(href="./buttons.html") buttons
+        li(class="nav-list__item")
+          a(href="./new.html") new
+        li(class="nav-list__item")
+          a(href="./subject.html") subject
+        li(class="nav-list__item")
+          a(href="./state-flow.html") state flow
