@@ -1,26 +1,39 @@
+@import './nav-list';
+@import './layout';
+@import './keypad';
+
+
 :root {
     --screen-background-colour: black;
 }
 
 html {
-    font-size: 20px;
-}
-
-body {
+    font-size: 22px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
     background-color: var(--screen-background-colour);
     color: white;
     font-family: -apple-system, sans-serif;
     transition: background-color 0.2s ease;
 }
 
+header {
+    text-align: center;
+}
+
 a {
     color: white;
 }
 
-button {
-    padding: 2em;
+.mode {
+    text-align: center;
+    font-size: 1rem;
 }
 
 .pin {
-    min-height: 1.2em;
+    font-size: 2rem;
+    min-height: 3rem;
+    padding-top: .5rem;
+    text-align: center;
 }

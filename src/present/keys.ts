@@ -1,5 +1,5 @@
 import '../../style/index.scss';
-import { keyCode$ } from '../key-code$';
+import { keyKeyCode$ } from '../key-keycode$';
 
 const subscriber = {
   next: (n: number) => console.log(n),
@@ -7,4 +7,4 @@ const subscriber = {
   complete: () => console.log('complete')
 }
 
-keyCode$.subscribe(subscriber);
+keyKeyCode$.subscribe(subscriber);

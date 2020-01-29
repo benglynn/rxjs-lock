@@ -1,0 +1,16 @@
+.nav-list {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: .5em 0 1em 0;
+
+    &__item {
+        flex-grow: 1;
+        margin: 0 .5em;
+
+        a {
+            text-decoration: none;
+            opacity: .7;
+        }
+    }
+}

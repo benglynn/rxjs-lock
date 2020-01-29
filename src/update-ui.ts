@@ -5,7 +5,6 @@ export function updateUi(state: State) {
   document.querySelectorAll('[data-key]').forEach(el => {
     const button = el as HTMLButtonElement;
     button.disabled = state.mode !== 'ready';
-    button.hidden = state.mode === 'open';
   })
 
   const showWhen = document
@@ -13,7 +12,7 @@ export function updateUi(state: State) {
     showWhen.forEach(el => {
     const htmlEl = el as HTMLElement;
     const mode = htmlEl.dataset.showWhen as string;
-    htmlEl.hidden = mode !== state.mode;
+    htmlEl.hidden = mode.indexOf( state.mode) === -1;
   });
 
   const pin = document.querySelector('.pin') as HTMLElement;

@@ -3,7 +3,7 @@ import { map } from 'rxjs/operators';
 import { Action } from './action$';
 
 import { clickKeyCode$ } from './click-keycode$';
-import { keyCode$ } from './key-code$';
+import { keyKeyCode$ } from './key-keycode$';
 
-export const keycodeAction$ = merge(clickKeyCode$, keyCode$)
+export const keycodeAction$ = merge(clickKeyCode$, keyKeyCode$)
     .pipe( map(n => ({ type: 'key', data: n }) as Action) );
