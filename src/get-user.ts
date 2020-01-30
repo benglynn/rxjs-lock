@@ -2,7 +2,8 @@ import { Observable } from 'rxjs';
 
 export function getUser(pin: Array<number>) {
     return new Observable((subscriber) => {
-      const respond = () => {
+      setTimeout(respond, 1000); // fake it!
+      function respond () {
         if (pin.join('') === '1234') {
           subscriber.next('Ben');
           subscriber.complete();
@@ -10,6 +11,7 @@ export function getUser(pin: Array<number>) {
           subscriber.error(new Error('403 Forbidden'));
         }
       }
-    setTimeout(respond, 1000);
     })
   }
+
+  // next: new.ts

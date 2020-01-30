@@ -34,3 +34,5 @@ export function sideEffects(action: Action, state: State) {
       break;
   }
 }
+
+// next: reducer.ts

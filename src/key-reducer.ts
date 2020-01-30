@@ -1,11 +1,15 @@
 import { State } from './state';
 import { Action } from './action$';
 
-export function keyReducer(state: State, action: Action) {
+export function
+  keyReducer(state: State, keyAction: Action): State {
 
-  if (state.mode === 'ready') {
-
-    const code = action.data as number;
+  if (state.mode !== 'ready') {
+    return state;
+  }
+  
+  else {
+    const code = keyAction.data as number;
     const isNumberKey = code >= 48 && code <= 57;
     const pinLength = 4;
 
@@ -16,9 +20,8 @@ export function keyReducer(state: State, action: Action) {
       const pin = state.pin.slice(0, -1)
       return { ...state, pin }
     }
-
     return state;
   }
-
-  return state;
 }
+
+// next: state-flow.ts

@@ -2,7 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const templateOptions = {
-  title: "RxJS",
+  title: "RxJS lock",
   hash: true,
   favicon: './icons/icon-64x64.png'
 }

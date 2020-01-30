@@ -5,5 +5,9 @@ import { Action } from './action$';
 import { clickKeyCode$ } from './click-keycode$';
 import { keyKeyCode$ } from './key-keycode$';
 
-export const keycodeAction$ = merge(clickKeyCode$, keyKeyCode$)
-    .pipe( map(n => ({ type: 'key', data: n }) as Action) );
+export const keycodeAction$ =
+  merge(clickKeyCode$, keyKeyCode$).pipe(
+    map(n => ({ type: 'key', data: n }) as Action)
+  );
+
+// next: subject.ts
